@@ -1,507 +1,321 @@
-// Events data with tags (max 3 per event)
 const events = [
     {
         id: 1,
         title: "Farkında Ol; Güvende Kal",
-        tags: ["Siber Güvenlik", "Kriptoloji", "Okul Öncesi"],
-        age: "11-15 yaş (Ortaokul)",
-        leader: "Sümeyye İrem YETER",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Etkinlik, öğrencilerin dijital ortamlarda karşılaşabilecekleri risklere dikkat çekmek amacıyla düzenlenmektedir.</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Dijital ortamlarda güvenlik farkındalığı</li>
-            <li>Şifreleme ve dijital güvenlik</li>
-            <li>Güvenilir kişi - güvensiz ortam farkındalığı</li>
-            <li>Kriptoloji temelli şifre çözme oyunu</li>
-        </ul>
-        <p>Kriptoloji ve psikolojik güvenlik konularını harmanlayan bu atölye, öğrencilere dijital dünyada güvende kalma yollarını öğretir.</p>`
+        leader: "Sümeyye İrem Yeter",
+        age: "11-15 Yaş",
+        location: "Körfez Bilim ve Sanat Merkezi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Siber Güvenlik", "Psikoloji"],
+        description: "Dijital dünyadaki risklerin farkına varın! Şifrelemenin psikolojik sınırları korumakla olan benzerliğini keşfedecek, kriptoloji temelli şifre çözme oyunlarıyla dijital güvenliğinizi nasıl sağlayacağınızı öğreneceksiniz."
     },
     {
         id: 2,
         title: "Siber Kahraman Kalkanım",
-        tags: ["Siber Güvenlik", "Sanat", "Kriptoloji"],
-        age: "5-8. sınıf",
-        leader: "Didem KESKİN ÇAYIR",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Dijital güvenliğin bir değerler bütünü olduğunu vurgulayan yaratıcı bir atölye.</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Renklerin dili ve siber değerler</li>
-            <li>Kalkan metaforu ile dijital güvenlik</li>
-            <li>Kriptolojik kalkan tasarımı</li>
-            <li>Kavram kartları ve anlamlandırma</li>
-        </ul>
-        <p>Öğrenciler kendi siber güvenlik kalkanlarını tasarlayarak, dijital değerleri görselleştirecekler.</p>`
+        leader: "Didem Keskin Çayır",
+        age: "5-8. Sınıf",
+        location: "700.Yıl Osmangazi Ortaokulu",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Sanat", "Siber Güvenlik"],
+        description: "Kendi dijital kalkanınızı tasarlamaya hazır mısınız? Renklerin ve sembollerin dilini kullanarak, siber güvenlik değerlerini sanatsal bir kalkan üzerine işleyecek ve kendi 'Siber Muhafız' kimliğinizi oluşturacaksınız."
     },
     {
         id: 3,
         title: "Jeolojinin Alfabesi: Kayaçlar",
-        tags: ["Bilim", "Kriptoloji", "Oyun"],
-        age: "İlkokul ve üzeri",
-        leader: "HAYRİYE KORKMAZ",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Kayaçların doğanın yazdığı şifreli bir günlük olduğunu keşfedin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Jeolojik şifreleme: Magmatik, tortul ve metamorfik kayaçlar</li>
-            <li>Kayaç analizi ve sınıflandırma</li>
-            <li>Algoritma oyunu ile öğrenme</li>
-            <li>Uygulamalı laboratuvar çalışması</li>
-        </ul>
-        <p>Kriptoloji ve jeoloji bilimini birleştiren benzersiz bir deneyim.</p>`
+        leader: "Hayriye Korkmaz",
+        age: "İlkokul ve Üzeri",
+        location: "Avcılar İlçe MEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Bilim", "Doğa"],
+        description: "Taşların dilini çözmeye var mısın? Magmatik, tortul ve metamorfik kayaçları inceleyerek doğanın şifreli günlüğünü okuyacak, asit testleri ve büyüteçlerle 'Genç Jeolog' unvanını kazanacaksınız."
     },
     {
         id: 4,
         title: "Boncuk Boncuk Güvenlik",
-        tags: ["Sanat", "Siber Güvenlik", "Kriptoloji"],
-        age: "10-14 yaş",
         leader: "Derya Altıntaş",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Hama boncuklarıyla siber güvenlik figürleri tasarlayın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Siber kahraman ve güçlü parola anlatımı</li>
-            <li>Renk farkındalığı ve güvenlik kodları</li>
-            <li>Hama boncuklarıyla tasarım</li>
-            <li>Kişiselleştirilmiş güvenlik tılsımı</li>
-        </ul>
-        <p>Sanat ve teknoloji bir arada! Kendi siber güvenlik figürünüzü yaratın.</p>`
+        age: "10-14 Yaş",
+        location: "Avcılar İlçe MEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Sanat", "Siber Güvenlik"],
+        description: "Hama boncuklarıyla kendi siber kahramanını tasarla! Güçlü parolaları altın, güvenli limanları mavi boncuklarla kodlayarak dijital güvenliğini fiziksel bir anahtarlığa dönüştür."
     },
     {
         id: 5,
-        title: "Medya Okuryazarlığı Dijital Oyun Atölyesi",
-        tags: ["Yapay Zeka", "Siber Güvenlik", "Oyun"],
-        age: "9 yaş ve üzeri",
-        leader: "Suzan ATMACA",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>3D robot Zihni ile dijital güvenlik öğrenin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Dijital muhafız Zihni ile tanışma</li>
-            <li>Medya okuryazarlığı ve güvenli alan farkındalığı</li>
-            <li>Kripto-labirent oyunu</li>
-            <li>İnteraktif şifre çözme</li>
-        </ul>
-        <p>Yapay zeka destekli eğitimle siber güvenlik dünyasına adım atın!</p>`
+        title: "Robot Zihni ile Dijital Şifre Avı",
+        leader: "Suzan Atmaca",
+        age: "Ortaokul",
+        location: "Derince BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Yapay Zeka", "Oyun"],
+        description: "3D robot 'Zihni' ile tanışın! Medya okuryazarlığı labirentinde dijital şifreleri çözecek, yapay zeka destekli ipuçlarıyla güvenli ve güvensiz alanları ayırt etmeyi öğreneceksiniz."
     },
     {
         id: 6,
         title: "Dijital Denge Yolculuğu",
-        tags: ["Siber Güvenlik", "Drama", "Oyun"],
-        age: "10-14 yaş",
-        leader: "Gülay TURĞUT",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Ekran kullanım alışkanlıklarınızı dengeye getirin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Emoji ile duygu anlatımı</li>
-            <li>Hikaye ve karar farkındalığı</li>
-            <li>Drama ve çözüm oyunu</li>
-            <li>Dijital kullanım takip tablosu</li>
-        </ul>
-        <p>Dijital bağımlılık ve zaman yönetimi konusunda farkındalık kazanın.</p>`
+        leader: "Gülay Turğut",
+        age: "10-14 Yaş",
+        location: "Hacı Seyit Taşan İlkokulu",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Drama", "Psikoloji"],
+        description: "Ekran bağımlılığına karşı iradeni güçlendir! Emojilerle duygu analizi yapacak, interaktif drama oyunlarıyla dijital dünyada zaman yönetimini ve dengede kalmayı öğreneceksiniz."
     },
     {
         id: 7,
         title: "Veri Dedektifleri",
-        tags: ["Siber Güvenlik", "Oyun", "Kriptoloji"],
-        age: "10 yaş ve üzeri",
         leader: "Tuğçe Höbek",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Dijital ayak izlerinizi keşfedin ve yönetin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Dijital ayak izi ve görünmez veri</li>
-            <li>Veri analizi ve risk farkındalığı</li>
-            <li>Veri iz avı ve haritalama</li>
-            <li>Kişisel farkındalık kartları</li>
-        </ul>
-        <p>İnternette bıraktığınız izleri takip edin ve güvenli kalın!</p>`
+        age: "10 Yaş ve Üzeri",
+        location: "Orbay Ortaokulu",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Oyun", "Siber Güvenlik"],
+        description: "İnternette bıraktığın ayak izlerini takip et! Dedektif ekipleri kurarak dijital izlerinizi analiz edecek, güvenli ve riskli verileri iplerle birbirine bağlayarak dev bir veri haritası oluşturacaksınız."
     },
     {
         id: 8,
         title: "İrrasyonel Şifreleme",
-        tags: ["Kriptoloji", "Siber Güvenlik", "Oyun"],
-        age: "Ortaokul, Lise ve üstü",
         leader: "Ahmet Harun Açık",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Tarihten günümüze şifreleme sanatını öğrenin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Kriptolojinin alfabesi: Harf-sayı eşleşmesi</li>
-            <li>Mesaj hazırlama ve gizli yazım</li>
-            <li>Şifre çözme ve yardımlaşma oyunu</li>
-            <li>Analitik düşünme becerileri</li>
-        </ul>
-        <p>Julius Caesar'ın kullandığı yöntemlerle kendi şifrelerinizi yaratın!</p>`
+        age: "Ortaokul ve Üzeri",
+        location: "İstanbul Teknik Üniversitesi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Kriptoloji", "Matematik"],
+        description: "Casusların gizli dilini öğrenin! Harf ve sayı eşleşmeleriyle kendi kripto mesajlarınızı yazacak, arkadaşlarınızın şifrelerini çözerek analitik düşünme becerilerinizi geliştireceksiniz."
     },
     {
         id: 9,
         title: "Siber Yolculukta Drama",
-        tags: ["Okul Öncesi", "Drama", "Siber Güvenlik"],
-        age: "5-6 yaş",
         leader: "Ayşe Çağdaş",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Küçükler için eğlenceli siber güvenlik draması!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Güvenli adımlar, hızlı kaçışlar oyunu</li>
-            <li>Siber Bezirgan Başı oyunu</li>
-            <li>Doğaçlama ve görsel hafıza</li>
-            <li>Afiş tasarımı</li>
-        </ul>
-        <p>Drama yöntemiyle okul öncesi çocuklara dijital güvenlik!</p>`
+        age: "5-6 Yaş (Okul Öncesi)",
+        location: "İTÜ Minik Denizciler",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Drama", "Okul Öncesi"],
+        description: "Minik denizciler siber okyanusa açılıyor! Oyunlar ve canlandırmalarla internetin görünmez ağlarını keşfedecek, güvenli ve güvensiz durumları eğlenceli bir şekilde öğreneceğiz."
     },
     {
         id: 10,
-        title: "ACT: Acil Çözüm Takımı",
-        tags: ["Kriptoloji", "Oyun", "Siber Güvenlik"],
-        age: "9 yaş ve üzeri",
-        leader: "Elif DİLEK",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>20 dakika içinde sistemi kurtarın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Caesar şifrelemesi</li>
-            <li>Görünmez veri ve UV ışık</li>
-            <li>Pigpen Cipher (Mason Şifresi)</li>
-            <li>Zamana karşı yarış</li>
-        </ul>
-        <p>Ekip çalışması ve kriptoloji bilgisi ile dijital tehditleri durdurun!</p>`
+        title: "Kripto-Labirent: Acil Çözüm Takımı",
+        leader: "Elif Dilek",
+        age: "Ortaokul",
+        location: "Derince BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Kriptoloji", "Oyun"],
+        description: "Siber evreni kurtarmak için 20 dakikanız var! Sezar Çarkı ve Pigpen şifrelerini çözerek, UV ışıklarla gizli mesajları bulun ve 'KARMA' virüsünü durdurun."
     },
     {
         id: 11,
-        title: "Dijital Şehir Trafik Işıkları",
-        tags: ["Okul Öncesi", "Siber Güvenlik", "Oyun"],
-        age: "5-6 yaş",
+        title: "Dijital Şehrin Trafik Işıkları",
         leader: "Yüksel Canbolat",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Renk kodları ile dijital güvenliği öğrenin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Yeşil (Güvenli), Sarı (Dikkat), Kırmızı (Tehlike)</li>
-            <li>Karar verme ve farkındalık</li>
-            <li>Hareketli renk oyunu</li>
-            <li>Görsel öğrenme</li>
-        </ul>
-        <p>Anaokulu çağındaki çocuklar için eğlenceli güvenlik eğitimi!</p>`
+        age: "Okul Öncesi",
+        location: "Barboros Anaokulu",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Okul Öncesi", "Oyun"],
+        description: "Dijital dünyada ne zaman durmalı, ne zaman geçmelisin? Kırmızı, Sarı ve Yeşil kartlarla dijital güvenliği öğrenecek, müzikli oyunlarla güvenli internet kurallarını pekiştireceğiz."
     },
     {
         id: 12,
-        title: "Yemleme Avcıları",
-        tags: ["Siber Güvenlik", "Oyun", "Kriptoloji"],
-        age: "10-15 yaş",
-        leader: "Pınar UŞAR",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Oltalama (Phishing) saldırılarını tespit edin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Dijital okuryazarlık ve dil bilgisi</li>
-            <li>Kırmızı bayraklar analizi</li>
-            <li>Yemleme kartlarını deşifre etme</li>
-            <li>Yazım hataları ve şüpheli linkler</li>
-        </ul>
-        <p>Türkçe öğretmeni bakış açısıyla siber güvenlik!</p>`
+        title: "Dil Dedektifi ile Oltaya Gelme",
+        leader: "Pınar Uşar",
+        age: "Ortaokul",
+        location: "Ressam Osman Hamdi Bey OO",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Siber Güvenlik", "Dil Bilgisi"],
+        description: "Sahte mesajları dil hatalarından yakalayın! Bir 'Dil Dedektifi' olarak oltalama (phishing) tuzaklarını inceleyecek, yazım yanlışları ve şüpheli linkleri analiz ederek dijital dolandırıcılara geçit vermeyeceksiniz."
     },
     {
         id: 13,
         title: "Siber Memory",
-        tags: ["Oyun", "Siber Güvenlik", "Okul Öncesi"],
-        age: "6-10 yaş",
         leader: "Esengül Eryılmaz",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Siber güvenlik sembollerini eşleştirin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>E-posta virüsü, şifre, mobil güvenlik kartları</li>
-            <li>Hafıza oyunu mekanikleri</li>
-            <li>Ödüllü öğrenme</li>
-            <li>Görsel hafıza geliştirme</li>
-        </ul>
-        <p>Oyun oynayarak siber güvenlik öğrenin!</p>`
+        age: "6-10 Yaş",
+        location: "Ressam Osman Hamdi Bey OO",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Oyun", "Hafıza"],
+        description: "İnternet işaretlerini ne kadar iyi tanıyorsun? Dijital dünyadaki sembolleri eşleştirerek hafızanızı test edin, doğru eşleşmeleri bularak sürpriz ödüller kazanın."
     },
     {
         id: 14,
-        title: "Sezar Çarkı",
-        tags: ["Kriptoloji", "Oyun", "Siber Güvenlik"],
-        age: "9 yaş (İlkokul 3. sınıf)",
+        title: "Sezar Çarkı Atölyesi",
         leader: "Sıtkı Bilal Doğan",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Roma imparatorlarının şifreleme yöntemini keşfedin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Sezar Çarkı ve anahtar kavramı</li>
-            <li>Harf kaydırma algoritması</li>
-            <li>Şifreleme ve deşifre etme</li>
-            <li>Matematiksel mantık</li>
-        </ul>
-        <p>Tarihi bir şifreleme tekniğiyle mesajlarınızı koruyun!</p>`
+        age: "9 Yaş (İlkokul)",
+        location: "Kocaeli Bilim Merkezi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Kriptoloji", "Tarih"],
+        description: "Roma imparatorlarının gizli haberleşme yöntemini keşfedin! Kendi Sezar Çarkınızı kullanarak mesajları şifreleyecek ve arkadaşlarınızla güvenli, gizli notlar paylaşacaksınız."
     },
     {
         id: 15,
-        title: "Siber Güvenlik Konulu Masal",
-        tags: ["Okul Öncesi", "Drama", "Sanat"],
-        age: "4-12 yaş",
+        title: "Siber Güvenlik Masalları",
         leader: "Elmas Gezer",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Masallarla siber güvenlik öğrenin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>İnteraktif masal anlatımı</li>
-            <li>Dijital kahraman ve güvenlik kuralları</li>
-            <li>Boyama ve sanatsal ifade</li>
-            <li>Çıkış bileti değerlendirme</li>
-        </ul>
-        <p>Dijital dünya masalları ile çocuklara güvenlik bilinci!</p>`
+        age: "4-12 Yaş",
+        location: "İzmit BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Sanat", "Masal"],
+        description: "Ejderhalar yerine dijital virüslerle savaşan kahramanlar! İnteraktif masal anlatımıyla siber dünyayı keşfedecek, kendi dijital kalkanınızı boyayarak hikayenin bir parçası olacaksınız."
     },
     {
         id: 16,
-        title: "Dijital Dedektif",
-        tags: ["Siber Güvenlik", "Oyun", "Kriptoloji"],
-        age: "11-13 yaş",
-        leader: "Aysel SÜRÜCÜ",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Güvenli ve tehlikeli durumları ayırt edin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Güvenli vs tehlikeli durum analizi</li>
-            <li>Güçlü parola oluşturma</li>
-            <li>İki aşamalı dedektiflik operasyonu</li>
-            <li>Mıknatıslı tahta ile kod oluşturma</li>
-        </ul>
-        <p>Dedektif olun ve dijital dünyayı güvenli hale getirin!</p>`
+        title: "Dijital Dedektif Atölyesi",
+        leader: "Aysel Sürücü",
+        age: "11-13 Yaş",
+        location: "Körfez BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Siber Güvenlik", "Oyun"],
+        description: "İnternet sokaklarındaki tuzakları temizlemeye hazır mısın? Güvenli ve tehlikeli durumları ayırt edecek, mıknatıslı panolarda kırılması imkansız 'Süper Parola'nızı tasarlayacaksınız."
     },
     {
         id: 17,
         title: "Gerçek mi Yapay Zeka mı?",
-        tags: ["Yapay Zeka", "Siber Güvenlik", "Oyun"],
-        age: "9 yaş ve üzeri",
         leader: "Muhammed Gökhan Perçem",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Deepfake videoları tespit edin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Yapay zeka videoları analizi</li>
-            <li>Dijital manipülasyon farkındalığı</li>
-            <li>Görsel tutarsızlıklar tespiti</li>
-            <li>Tablet üzerinden test</li>
-        </ul>
-        <p>Gördüğünüz her şey gerçek mi? Öğrenin!</p>`
+        age: "9 Yaş ve Üzeri",
+        location: "Kocaeli Üniversitesi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Yapay Zeka", "Teknoloji"],
+        description: "Gözlerinize ne kadar güveniyorsunuz? Deepfake ve yapay zeka videolarını analiz edecek, fiziksel hataları ve görsel tutarsızlıkları bularak dijital sahteciliği tespit etmeyi öğreneceksiniz."
     },
     {
         id: 18,
         title: "Eğlenceli Şifreleme: Kaydırmalı Algoritma",
-        tags: ["Kriptoloji", "Oyun", "Sanat"],
-        age: "Ortaokul",
         leader: "Nuriye Aşut Önal",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Renkli şifre diskleriyle mesaj gönderin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Sezar şifrelemesi ve kaydırmalı algoritma</li>
-            <li>Anahtar (key) kavramı</li>
-            <li>Gönderici-alıcı rol paylaşımı</li>
-            <li>Şifreli mesajlaşma oyunu</li>
-        </ul>
-        <p>Algoritmik düşünmeyi şifreleme ile öğrenin!</p>`
+        age: "Ortaokul",
+        location: "Körfez BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Kriptoloji", "Algoritma"],
+        description: "Mesajlarınız başkasının eline geçse bile okunamasın! Renkli şifre diskleri ve kaydırmalı algoritmalarla kendi gizli dilinizi oluşturun, dijital dünyada bilgilerinizi zırh gibi koruyun."
     },
     {
         id: 19,
-        title: "Siber Kahramanlar Maske Atölyesi",
-        tags: ["Sanat", "Siber Güvenlik", "Drama"],
-        age: "10-14 yaş",
-        leader: "Bilgen Akgül",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Kendi siber kahramanınızı yaratın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Karakter tasarımı ve strateji</li>
-            <li>Yüz boyama ve semboller</li>
-            <li>Slogan oluşturma</li>
-            <li>Siber muhafız birliği fotoğrafı</li>
-        </ul>
-        <p>Sanat ve teknoloji ile dijital kahramanınızı canlandırın!</p>`
+        title: "Oltaya G(e)lmeyen Kelimeler: Tabure",
+        leader: "Ayşenur Öztürk Akcin",
+        age: "10-15 Yaş",
+        location: "Ressam Osman Hamdi Bey OO",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Mühendislik", "Geri Dönüşüm"],
+        description: "Eski kitaplar ve kağıtlar ne kadar güçlü olabilir? Atık malzemeleri rulo yaparak sağlam tabureler inşa edecek, parçaların birleşerek nasıl güçlü bir bütün oluşturduğunu deneyimleyeceksiniz."
     },
     {
         id: 20,
-        title: "Bilgisayar Şifreleme Sistemleri",
-        tags: ["Kriptoloji", "Siber Güvenlik", "Bilim"],
-        age: "Ortaokul ve üzeri",
-        leader: "Kübra Aycan Kavlak",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Kod yazarak şifreleme yapın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Simetrik ve asimetrik şifreleme</li>
-            <li>Hash fonksiyonları</li>
-            <li>Algoritma mantığı</li>
-            <li>Kodlama ile şifreleme deneyimi</li>
-        </ul>
-        <p>Gerçek bilgisayar şifreleme sistemlerini kodlayın!</p>`
+        title: "Siber Kahramanlar Maske Atölyesi",
+        leader: "Bilgen Akgül",
+        age: "10-14 Yaş",
+        location: "Şehit Halil İbrahim Yiğit OO",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Sanat", "Siber Güvenlik"],
+        description: "İçindeki siber kahramanı ortaya çıkar! Yüz boyama ve maske tasarımıyla kendi dijital süper gücünü (Şifre Koruyucu, Veri Kalkanı) yansıt ve siber ormanın koruyucusu ol."
     },
     {
         id: 21,
-        title: "Aileler İçin Dijital Güvenlik Söyleşisi",
-        tags: ["Siber Güvenlik", "Drama", "Oyun"],
-        age: "Ebeveynler",
-        leader: "Melek Candemir",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Ebeveynler için dijital ebeveynlik rehberi!</p>
-        <h3>Söyleşi İçeriği:</h3>
-        <ul>
-            <li>Ortak deneyimler ve farkındalık</li>
-            <li>Ekran süresi yönetimi</li>
-            <li>Güvenli oyun seçimi</li>
-            <li>Aile dijital anayasası oluşturma</li>
-        </ul>
-        <p>Çay eşliğinde samimi bir söyleşi ile bilinçli ebeveyn olun!</p>`
+        title: "Kodlama ile Şifreleme",
+        leader: "Kübra Aycan Kavlak",
+        age: "Ortaokul",
+        location: "Gebze 23 Nisan BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Kodlama", "Matematik"],
+        description: "0 ve 1'lerin dünyasına yolculuk! Basit kodlama mantığıyla kendi şifreleme algoritmanızı yazacak, bilgisayarların verileri nasıl sakladığını uygulamalı olarak öğreneceksiniz."
     },
     {
         id: 22,
-        title: "Şifre Fabrikası",
-        tags: ["Oyun", "Kriptoloji", "Siber Güvenlik"],
-        age: "9 yaş ve üzeri",
-        leader: "Müzeyyen Tekerek",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Zamana karşı güçlü şifre üretin!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Şifre bileşenleri ve güvenlik standartları</li>
-            <li>Küp oyunu ile şifre oluşturma</li>
-            <li>Kum saati ve zil yarışması</li>
-            <li>Güvenlik onayı</li>
-        </ul>
-        <p>Heyecan dolu bir oyunla şifre güvenliğini öğrenin!</p>`
+        title: "Dijital Ebeveynlik: Bir Çay Molası",
+        leader: "Melek Candemir",
+        age: "Yetişkin",
+        location: "Gebze 23 Nisan BİLSEM",
+        date: "-WIP-",
+        time: "Programda Belirtilecek",
+        tags: ["Söyleşi", "Psikoloji", "Ebeveyn"],
+        description: "Mükemmel ebeveyn yoktur, bilinçli ebeveyn vardır. Dijital dünyada çocuk yetiştirmenin zorluklarını, ekran süresi yönetimini ve güvenli interneti samimi bir sohbet ortamında konuşuyoruz."
     },
     {
         id: 23,
-        title: "İnteraktif Bilim Sunumu",
-        tags: ["Bilim", "Siber Güvenlik", "Drama"],
-        age: "Tüm yaşlar",
-        leader: "Muhammed Eren Karaoğlu",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Argümantasyon temelli bilim sunumu!</p>
-        <h3>Sunum İçeriği:</h3>
-        <ul>
-            <li>Deneyim temelli bilgi aktarımı</li>
-            <li>Görsel destekli anlatım</li>
-            <li>Fikir çarpıştırma atölyesi</li>
-            <li>Senaryo analizi</li>
-        </ul>
-        <p>Siber güvenlik konusunda derinlemesine tartışma!</p>`
+        title: "Şifre Fabrikası",
+        leader: "Müzeyyen Tekerek",
+        age: "Ortaokul",
+        location: "Gebze 23 Nisan BİLSEM",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Oyun", "Matematik"],
+        description: "Fabrikada alarm çalıyor! En hızlı ve en güçlü şifreyi kim üretecek? Harf, rakam ve sembol küplerini kullanarak siber saldırılara karşı en dayanıklı zırhı ören siz olun."
     },
     {
         id: 24,
-        title: "Bilim Laboratuvarı: Elementlerin Gücü",
-        tags: ["Bilim", "Drama", "Oyun"],
-        age: "Tüm yaşlar",
-        leader: "Seracettin OSMANOĞLU",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Fizik ve kimya deneyleri ile bilim şöleni!</p>
-        <h3>Gösteri İçeriği:</h3>
-        <ul>
-            <li>Ateş ve buz: Yanma deneyi ve sıvı azot</li>
-            <li>Akışkanlar mekaniği ve görünmez kuvvetler</li>
-            <li>Kimyasal tepkimeler</li>
-            <li>Basınç gücü deneyleri</li>
-        </ul>
-        <p>Doğanın yasalarını gözlerinizle görün!</p>`
+        title: "Dijital Kriz: Fikir Çarpıştırma",
+        leader: "Muhammed Eren Karaoğlu",
+        age: "Lise ve Üzeri",
+        location: "Bağımsız",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Siber Güvenlik", "Tartışma"],
+        description: "Bir dijital kriz anında ne yapardınız? Verilen senaryolar üzerinden argümanlarınızı geliştirin, karşıt fikirleri çürütün ve krizden en güvenli çıkış yolunu tasarlayın."
     },
     {
         id: 25,
-        title: "Kripto ve Siber Gelecek",
-        tags: ["Kriptoloji", "Bilim", "Siber Güvenlik"],
-        age: "Lise ve üzeri",
-        leader: "Dr. Hasan Koca",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>DNA tabanlı şifreleme sistemi!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Biyokriptografik model</li>
-            <li>DNA dörtlük sistemi (A, C, G, T)</li>
-            <li>Modüler aritmetik</li>
-            <li>Genetik kod laboratuvarı</li>
-        </ul>
-        <p>Geleceğin şifreleme teknolojisi: DNA kriptolojisi!</p>`
+        title: "Elementlerin Gücü: Bilim Laboratuvarı",
+        leader: "Seracettin Osmanoğlu",
+        age: "Tüm Yaşlar",
+        location: "Kocaeli Bilim Merkezi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Bilim", "Fizik"],
+        description: "Ateşi avucunuzda tutmaya hazır mısınız? Sıvı azot gösterileri, damacana bükme deneyi ve kimyasal tepkimelerle fiziğin ve kimyanın büyüleyici dünyasına tanık olun."
     },
     {
         id: 26,
-        title: "Sistemi Kurtar Güvende Kal",
-        tags: ["Oyun", "Siber Güvenlik", "Kriptoloji"],
-        age: "Ortaokul ve Lise",
-        leader: "Ayşe Gültepe",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Dijital labirentte görev tamamlayın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Ortaokul: Fiziksel görev odaları</li>
-            <li>Lise: Dijital QR kod rotası</li>
-            <li>Phishing tespiti ve dijital ayak izi</li>
-            <li>Güvenli bağlantı analizi</li>
-        </ul>
-        <p>Seviye seviye ilerleyin ve sistemi kurtarın!</p>`
+        title: "Kripto ve Siber Gelecek: DNA",
+        leader: "Dr. Hasan Koca",
+        age: "Lise ve Üzeri",
+        location: "Kocaeli Bilim Merkezi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Biyoloji", "Kriptoloji"],
+        description: "Geleceğin şifreleri hücrelerimizde saklı! DNA'nın dörtlü yapısını (A,C,G,T) kullanarak biyokriptografik şifreleme yapacak, biyoloji ve matematiğin güvenli birleşimini keşfedeceksiniz."
     },
     {
         id: 27,
-        title: "Bilim Gösterisi",
-        tags: ["Bilim", "Drama", "Oyun"],
-        age: "Tüm yaşlar",
-        leader: "Emre Yıldız",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Fizik ve kimya deneyleri ile bilim şöleni!</p>
-        <h3>Gösteri İçeriği:</h3>
-        <ul>
-            <li>Isı ve madde etkileşimi</li>
-            <li>Ateş deneyleri ve sıvı azot</li>
-            <li>Akışkanlar mekaniği</li>
-            <li>Kimyasal tepkimeler ve basınç</li>
-        </ul>
-        <p>Bilimin büyüsünü keşfedin!</p>`
+        title: "Sistemi Kurtar Güvende Kal",
+        leader: "Ayşe Gültepe",
+        age: "Ortaokul ve Lise",
+        location: "Düzce Borsa İstanbul MTAL",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Oyun", "Siber Güvenlik"],
+        description: "Dijital labirentten çıkış yolunu bul! Siber timler halinde kilitli kutuları açın, QR kod görevlerini tamamlayın ve dijital ayak izlerinizi temizleyerek sistemi kurtarın."
     },
     {
         id: 28,
+        title: "Bilim Gösterisi",
+        leader: "Emre Yıldız",
+        age: "Tüm Yaşlar",
+        location: "Kocaeli Bilim Merkezi",
+        date: "2-3-4 Ekim",
+        time: "Gösteri Saatlerinde",
+        tags: ["Etkinlik", "Bilim", "Gösteri"],
+        description: "Bilim hiç bu kadar heyecanlı olmamıştı! Görsel şölen eşliğinde gerçekleşen deneyler, sıvı azot bulutları ve basınç şovlarıyla unutulmaz bir bilim gösterisi sizleri bekliyor."
+    },
+    {
+        id: 29,
         title: "Bileğimde Şifreleme",
-        tags: ["Sanat", "Kriptoloji", "Oyun"],
-        age: "Tüm yaşlar",
-        leader: "Tunahan Aktoprak",
-        location: "---WIP---",
-        time: "---WIP---",
-        description: `<p>Boncuklarla kendi şifrenizi yaratın!</p>
-        <h3>Etkinlik İçeriği:</h3>
-        <ul>
-            <li>Güçlü şifre neden önemli?</li>
-            <li>Şifre karşılaştırma tablosu</li>
-            <li>8 boncukla benzersiz şifre</li>
-            <li>Bileklik yapımı</li>
-        </ul>
-        <p>Şifrenizi taşıyın, güvenliğinizi hatırlayın!</p>`
+        leader: "GTÜ Bilim Ekibi",
+        age: "İlkokul",
+        location: "Gebze Teknik Üniversitesi",
+        date: "2-3-4 Ekim",
+        time: "10:00 - 16:00",
+        tags: ["Etkinlik", "Sanat", "Siber Güvenlik"],
+        description: "Şifrenizi bileğinizde taşıyın! İkili kod sistemini veya renkli boncukları kullanarak kendi benzersiz şifrenizi bir bilekliğe dönüştürün ve güvenliğinizi yanınızdan ayırmayın."
     }
 ];
